@@ -8,7 +8,7 @@ yarn
 yarn start
 ```
 
-# dharma-relayer
+# Dharma-relayer
 
 ## Dependencies
 
@@ -41,3 +41,7 @@ And launch the React frontend via:
 ```
 yarn start
 ```
+
+# Subgraph (under construction)
+
+To run the Graph locally follow https://github.com/graphprotocol/graph-node/wiki/ETHSF-Hackathon
