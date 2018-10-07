@@ -1,0 +1,27 @@
+.loan-request-row {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.highlight {
+    animation: highlight 2s;
+    animation-delay: 250ms;
+}
+
+@keyframes highlight {
+    0% {
+        background: #ffff99;
+    }
+    100% {
+        background: none;
+    }
+}
+
+.react-bootstrap-table thead > tr > th {
+    cursor: pointer;
+}
+
+.react-bootstrap-table th .order > .dropdown > .caret,
+.react-bootstrap-table th .order > .dropup > .caret {
+    display: none;
+}
