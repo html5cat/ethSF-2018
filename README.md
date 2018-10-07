@@ -15,12 +15,23 @@ There's three parts:
 3. Graph Protocol subgraph that will be used in the future to help run queries on the loan data
 
 ## How I built it
-The key components are Dharma Relayer, 0x.js for token conversions, Dai.js to convert to Stablecoin, Bloom for Identity and Graph for queries.
+Currently the key components are
+* Dharma Relayer
+* 0x.js for token conversions
+* Dai.js to convert to Stablecoin
+* Bloom for Identity
+* Graph for queries
+
+Would be awesome to add:
+* NuCypher for proxy re-encryption of parts of loan data
+* Chainlink to do automated notifications upon contract changes and pulling in external data upon loan creation
 
 ## Challenges I ran into
 * Due to time constraints had to cut down the scope significantly
 * Dai.js doesn't support TypeScript at the moment
 * My limited experience with Dharma and 0x
+* NuCypher is currently only available in Python and Go so I didn't add it yet, but would be awesome to encrypt some of the data about the loans
+* Didn't have enough time to implement Chainlink, but would be awesome to send out notifications once the loans are created
 
 ## Accomplishments that I'm proud of
 It's a great first step and it's kinda working :)
