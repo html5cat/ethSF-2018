@@ -22,9 +22,10 @@ Currently the key components are
 * Bloom for Identity
 * Graph for queries
 
-Would be awesome to add:
+Not currently in the codebase, but tried adding:
 * NuCypher for proxy re-encryption of parts of loan data
 * Chainlink to do automated notifications upon contract changes and pulling in external data upon loan creation
+* Bloqboard for loan scanning
 
 ## Challenges I ran into
 * Due to time constraints had to cut down the scope significantly
