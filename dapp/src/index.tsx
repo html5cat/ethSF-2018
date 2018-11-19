@@ -2,9 +2,11 @@ import { ContractWrappers, RPCSubprovider, Web3ProviderEngine } from '0x.js';
 import { SignerSubprovider } from '@0xproject/subproviders';
 import { Web3Wrapper } from '@0xproject/web3-wrapper';
 import { Content, Footer } from 'bloomer';
+import * as Cryptoauth from 'cryptoauth';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ToastProvider, withToastManager } from 'react-toast-notifications';
+import * as Web3 from 'web3';
 
 import { Account } from './components/account';
 import { Faucet } from './components/faucet';
@@ -23,8 +25,8 @@ const RPC = 'http://localhost:8545';
 
 const App = () => {
     let renderContent;
-    // Detect if Web3 is found, if not, ask the user to install Metamask
-    const web3 = (window as any).web3;
+    const ethProvider = Cryptoauth.getProvider({ portis: { network: 'ropsten' } });
+    const web3 = new (Web3 as any)(ethProvider);
     if (web3) {
         // Set up Web3 Provider Engine with a few helper Subproviders from 0x
         const providerEngine = new Web3ProviderEngine({ pollingInterval: 10000 });
